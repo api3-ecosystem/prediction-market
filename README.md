@@ -10,6 +10,6 @@ Users can also come in and make their own markets. They can set the asset, the p
 
 - `/backend` contains all the protocol contracts and scripts to run/deploy and interact with the market.
 - `/frontend` contains the UI for the market. Built using NextJS.
-- `/graph` contains the subgraph for the market. Built using The Graph.
+- `/graph` contains the subgraph for the market. This is used to track market events. Built using The Graph.
 
 [README WIP]
