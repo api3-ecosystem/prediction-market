@@ -1,10 +1,9 @@
 require("dotenv").config();
-require("@nomicfoundation/hardhat-toolbox");
+require('@nomiclabs/hardhat-waffle');
 require("hardhat-deploy");
 
 const PK_DEPLOYER = process.env.PK_DEPLOYER;
 
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
     version: "0.8.18",
@@ -21,7 +20,7 @@ module.exports = {
     },
     mumbai: {
       chainId: 80001,
-      url: "https://polygon-mumbai.g.alchemy.com/v2/eH-QZss2iiTRnRLoHooQbkOcb6IBDFtf",
+      url: "https://polygon-testnet.public.blastapi.io",
       accounts: [PK_DEPLOYER],
     },
     goerli: {

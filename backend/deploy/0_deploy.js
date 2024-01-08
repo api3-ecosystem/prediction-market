@@ -35,59 +35,6 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
   const mock = new ethers.Contract(Mock.address, Mock.abi, signer);
   await mock.mint(deployer, 1000000000000);
-
-  // const getProxyForETH = await trading.getAssetToProxy("ETH");
-  // console.log(getProxyForETH);
-
-  // await mock.approve(Trading.address, 10000000000);
-
-  // const _tokenSymbol = "ETH";
-  // const _isAbove = true;
-  // const _targetPricePoint = "1900000000000000000000";
-  // const _fee = "50";
-  // const _deadline = "1788802119";
-  // const _basePrice = "100";
-  // const _caller = deployer;
-
-  // const createTxn = await trading.createPrediction(
-  //   _tokenSymbol,
-  //   _proxyAddress,
-  //   _isAbove,
-  //   _targetPricePoint,
-  //   _fee,
-  //   _deadline,
-  //   _basePrice,
-  //   _caller
-  // );
-  // const receipt = await createTxn.wait(1);
-  // console.log("Market Created Successfully.\n");
-
-  // const predictionId = receipt.events[3].args.predictionId;
-  // const predictionStruct = await trading.getPrediction(predictionId);
-
-  // const mhFactory = await ethers.getContractFactory("PM_MarketHandler");
-  // const mhContract = mhFactory.attach(predictionStruct.marketHandler);
-  // // Retrieve the ABI of the contract
-  // const MarketHandler = {
-  //   address: predictionStruct.marketHandler,
-  //   abi: mhContract.interface.format(ethers.utils.FormatTypes.json),
-  // };
-
-  // const marketHandler = new ethers.Contract(
-  //   MarketHandler.address,
-  //   MarketHandler.abi,
-  //   signer
-  // );
-  // await mock.approve(MarketHandler.address, 10000000000);
-
-  // const buyTxn = await marketHandler.buyNoToken(1);
-  // const buyReceipt = await buyTxn.wait(1);
-
-  // console.log(
-  //   "No Tokens Bought Successfully. Buyer :",
-  //   buyReceipt.events[3].args.trader,
-  //   "\n"
-  // );
 };
 
 module.exports.tags = ["All"];
